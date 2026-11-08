@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Sejarah & Bukti Belajar - Rasya Dwi Anugrah</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <title>Rasya Architectural Heritage - Bukti Belajar Matematika Informatika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #120d0a;
-      --card-bg: #1c1410;
-      --accent-gold: #d4af37;
-      --accent-bronze: #cd7f32;
-      --text-main: #f5efe6;
-      --text-muted: #c8b9a6;
-      --border-color: #3a2b22;
-      --error-color: #e65c5c;
+      --bg-dark: #0f141d;
+      --card-bg: #18202c;
+      --accent-gold: #c5a059;
+      --accent-bronze: #e6c587;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --border-color: #2a3547;
+      --error-color: #f87171;
     }
 
     * {
@@ -25,8 +25,8 @@
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      /* Background tema arsip & naskah kuno */
-      background: linear-gradient(135deg, #0e0907 0%, #17100c 50%, #241812 100%);
+      /* Background dengan gradasi gelap bernuansa Katedral Gotik & Marmer Klasik */
+      background: linear-gradient(135deg, #090c12 0%, #111722 50%, #1a2332 100%);
       background-attachment: fixed;
       color: var(--text-main);
       line-height: 1.6;
@@ -38,7 +38,7 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(14, 9, 7, 0.92);
+      background-color: rgba(15, 20, 29, 0.92);
       backdrop-filter: blur(10px);
       border-bottom: 2px solid var(--accent-gold);
       padding: 1rem 2rem;
@@ -49,7 +49,7 @@
 
     .nav-brand {
       font-family: 'Cinzel', serif;
-      font-weight: 800;
+      font-weight: 900;
       font-size: 1.3rem;
       color: var(--accent-gold);
       letter-spacing: 2px;
@@ -89,7 +89,7 @@
     .section-title {
       font-family: 'Cinzel', serif;
       font-size: 2.2rem;
-      font-weight: 800;
+      font-weight: 700;
       margin-bottom: 0.5rem;
       color: var(--accent-gold);
       letter-spacing: 1px;
@@ -112,7 +112,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
+      box-shadow: 0 12px 30px rgba(197, 160, 89, 0.08);
     }
 
     .biodata-info h1 {
@@ -125,9 +125,9 @@
 
     .badge {
       display: inline-block;
-      background: rgba(212, 175, 55, 0.1);
+      background: rgba(197, 160, 89, 0.12);
       color: var(--accent-gold);
-      border: 1px solid rgba(212, 175, 55, 0.3);
+      border: 1px solid rgba(197, 160, 89, 0.3);
       padding: 0.3rem 0.8rem;
       border-radius: 2rem;
       font-size: 0.85rem;
@@ -181,7 +181,7 @@
 
     .calc-header h3 {
       font-family: 'Cinzel', serif;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: var(--accent-gold);
     }
 
@@ -204,7 +204,7 @@
     }
 
     input, select {
-      background: #110b08;
+      background: #101622;
       border: 1px solid var(--border-color);
       color: var(--text-main);
       padding: 0.65rem 0.9rem;
@@ -220,8 +220,8 @@
     }
 
     .btn {
-      background: linear-gradient(135deg, var(--accent-gold), var(--accent-bronze));
-      color: #120d0a;
+      background: linear-gradient(135deg, var(--accent-gold), #967432);
+      color: #0f141d;
       border: none;
       padding: 0.75rem 1.25rem;
       border-radius: 0.4rem;
@@ -240,7 +240,7 @@
 
     /* Output Box */
     .output-box {
-      background: #110b08;
+      background: #101622;
       border: 1px dashed var(--border-color);
       border-radius: 0.4rem;
       padding: 1rem;
@@ -253,7 +253,7 @@
 
     .output-box.success {
       border-color: var(--accent-gold);
-      color: var(--accent-gold);
+      color: var(--accent-bronze);
     }
 
     .output-box.error {
@@ -279,12 +279,12 @@
 </head>
 <body>
 
-  <!-- Navigasi -->
+  <!-- Navigasi Utama -->
   <nav>
-    <div class="nav-brand">🏛️ Arsip Sejarah - Rasya</div>
+    <div class="nav-brand">🏛️ Rasya Architectural Heritage</div>
     <ul class="nav-links">
-      <li><a href="#biodata">Profil Peneliti</a></li>
-      <li><a href="#bukti-belajar">Bukti Belajar Kuno</a></li>
+      <li><a href="#biodata">Profil Arsitek</a></li>
+      <li><a href="#bukti-belajar">Bukti Belajar Modul</a></li>
     </ul>
   </nav>
 
@@ -294,17 +294,18 @@
     <section id="biodata">
       <div class="biodata-card">
         <div class="biodata-info">
-          <span class="badge">Arsiparis & SI Student • SI-R-1</span>
+          <span class="badge">Arsitektur Komputasi • SI-R-1</span>
           <h1>Rasya Dwi Anugrah</h1>
           <p style="color: var(--text-muted); margin-top: 0.5rem;">
-            Mahasiswa Semester 1 Sistem Informasi yang mendokumentasikan logis matematika melalui peradaban sejarah dan naskah komputasi kuno.
+            Mahasiswa Semester 1 Sistem Informasi yang mengkaji keindahan Geometri & Struktur Arsitektur Eropa klasik melalui kalkulasi matematika komputasional.
           </p>
           <ul class="detail-list">
+            <li><strong>Nama Project:</strong> Rasya Architectural Heritage</li>
             <li><strong>NIM:</strong> 262505007</li>
             <li><strong>Fakultas / Prodi:</strong> Komputer / Sistem Informasi (SI-R-1)</li>
             <li><strong>Mata Kuliah:</strong> Matematika Informatika</li>
             <li><strong>Dosen Pengampu:</strong> Iin, M.Kom</li>
-            <li><strong>Fokus Era:</strong> Komputasi Kuno & Kriptografi Sejarah</li>
+            <li><strong>Era Arsitektur Rujukan:</strong> Gotik, Renaisans, Klasik Yunani-Romawi & Barok</li>
           </ul>
         </div>
       </div>
@@ -321,51 +322,51 @@
         <!-- LEVEL 1: Modulo Calculator -->
         <div class="calc-card">
           <div class="calc-header">
-            <h3>Level 1: Kalkulator Modulo</h3>
-            <p>Perhitungan sisa pembagian (a mod m) untuk siklus penanggalan kuno</p>
+            <h3>Level 1: Modulo Calculator</h3>
+            <p>Perhitungan modulasi simetri & interval pilar bangunan (a mod m)</p>
           </div>
           <div class="form-group">
-            <label>Bilangan Utama (a)</label>
+            <label>Panjang Struktur Utama (a)</label>
             <input type="number" id="l1-a" placeholder="Contoh: 17">
           </div>
           <div class="form-group">
-            <label>Siklus Modulus (m > 0)</label>
+            <label>Jarak Modulus Pilar (m > 0)</label>
             <input type="number" id="l1-m" placeholder="Contoh: 5">
           </div>
-          <button class="btn" onclick="calcModulo()">Hitung Modulo</button>
-          <div id="l1-output" class="output-box">Hasil inskripsi akan muncul di sini...</div>
+          <button class="btn" onclick="calcModulo()">Kalkulasi Modulus</button>
+          <div id="l1-output" class="output-box">Hasil blueprint akan muncul di sini...</div>
         </div>
 
         <!-- LEVEL 2: Congruence Checker -->
         <div class="calc-card">
           <div class="calc-header">
-            <h3>Level 2: Pengecek Kongruensi</h3>
-            <p>Verifikasi keselarasan dua era sejarah a ≡ b (mod m)</p>
+            <h3>Level 2: Congruence Checker</h3>
+            <p>Pengecek simetri proporsi kubah & fasad: a ≡ b (mod m)</p>
           </div>
           <div class="form-group">
-            <label>Tahun / Era a</label>
+            <label>Proporsi Fasad a</label>
             <input type="number" id="l2-a" placeholder="Contoh: 17">
           </div>
           <div class="form-group">
-            <label>Tahun / Era b</label>
+            <label>Proporsi Kubah b</label>
             <input type="number" id="l2-b" placeholder="Contoh: 2">
           </div>
           <div class="form-group">
-            <label>Modulus m (> 0)</label>
+            <label>Modulus Rasio m (> 0)</label>
             <input type="number" id="l2-m" placeholder="Contoh: 5">
           </div>
-          <button class="btn" onclick="checkCongruence()">Periksa Kongruensi</button>
-          <div id="l2-output" class="output-box">Hasil inskripsi akan muncul di sini...</div>
+          <button class="btn" onclick="checkCongruence()">Uji Simetri Fasad</button>
+          <div id="l2-output" class="output-box">Hasil blueprint akan muncul di sini...</div>
         </div>
 
         <!-- LEVEL 5: Number System Calculator -->
         <div class="calc-card">
           <div class="calc-header">
-            <h3>Level 5: Konverter Sistem Bilangan</h3>
-            <p>Translasi angka antar peradaban (Biner, Desimal, Oktal, Heksa)</p>
+            <h3>Level 5: Number System Calculator</h3>
+            <p>Konversi data skema arsitektur (Biner, Desimal, Oktal, Hex)</p>
           </div>
           <div class="form-group">
-            <label>Sistem Asal</label>
+            <label>Basis Data Asal</label>
             <select id="l5-base">
               <option value="2">Biner (Basis 2)</option>
               <option value="10" selected>Desimal (Basis 10)</option>
@@ -374,29 +375,29 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Kode Naskah / Simbol</label>
+            <label>Nilai Dimensi / Elemen</label>
             <input type="text" id="l5-input" placeholder="Masukkan nilai...">
           </div>
-          <button class="btn" onclick="convertNumberSystem()">Terjemahkan</button>
-          <div id="l5-output" class="output-box">Hasil inskripsi akan muncul di sini...</div>
+          <button class="btn" onclick="convertNumberSystem()">Konversi Dimensi</button>
+          <div id="l5-output" class="output-box">Hasil blueprint akan muncul di sini...</div>
         </div>
 
         <!-- LEVEL 6: Combinatorics Calculator -->
         <div class="calc-card">
           <div class="calc-header">
-            <h3>Level 6: Kalkulator Kombinatorika</h3>
-            <p>Analisis susunan taktik perang & aliansi (Permutasi & Kombinasi)</p>
+            <h3>Level 6: Combinatorics Calculator</h3>
+            <p>Kombinasi penyusunan ornamen Gothic & Pilar Renaisans (P & C)</p>
           </div>
           <div class="form-group">
-            <label>Total Artefak / Pasukan (n)</label>
+            <label>Total Ornamen / Pilar (n)</label>
             <input type="number" id="l6-n" placeholder="Contoh: 5">
           </div>
           <div class="form-group">
-            <label>Jumlah Terpilih (r)</label>
+            <label>Ornamen Terpilih (r)</label>
             <input type="number" id="l6-r" placeholder="Contoh: 2">
           </div>
-          <button class="btn" onclick="calcCombinatorics()">Hitung Formasi Sejarah</button>
-          <div id="l6-output" class="output-box">Hasil inskripsi akan muncul di sini...</div>
+          <button class="btn" onclick="calcCombinatorics()">Hitung Formasi Elemen</button>
+          <div id="l6-output" class="output-box">Hasil blueprint akan muncul di sini...</div>
         </div>
 
       </div>
@@ -405,7 +406,7 @@
   </div>
 
   <footer>
-    <p>&copy; 2026 Rasya Dwi Anugrah (NIM: 262505007) - Sistem Informasi. All rights reserved.</p>
+    <p>&copy; 2026 Rasya Dwi Anugrah (NIM: 262505007) - Project: Rasya Architectural Heritage. All rights reserved.</p>
   </footer>
 
   <!-- JAVASCRIPT LOGIC -->
@@ -440,7 +441,7 @@
       const k = Math.floor(a / m);
 
       out.className = "output-box success";
-      out.innerText = `[ARSIP KONSISTENSI]\n${a} mod ${m} = ${result}\n\n[DOKUMENTASI]\n${a} = (${m} × ${k}) + ${result}\nSisa siklus penanggalan = ${result}`;
+      out.innerText = `[REKAPITULASI PROPORSI]\n${a} mod ${m} = ${result}\n\n[DOKUMENTASI KETEPATAN]\n${a} = (${m} × ${k}) + ${result}\nSisa modulasi interval pilar = ${result}`;
     }
 
     function checkCongruence() {
@@ -469,10 +470,10 @@
       const isCongruent = (diff % m === 0);
 
       out.className = isCongruent ? "output-box success" : "output-box error";
-      out.innerText = `[VERIFIKASI ERA]\n${a} ≡ ${b} (mod ${m})\n\n[STATUS]: ${isCongruent ? "KONGRUEN (HARMONIS)" : "TIDAK KONGRUEN"}\n\n[METODE ARSIP]\na - b = ${a} - ${b} = ${diff}\n` + 
+      out.innerText = `[UJI SIMETRI FASAD]\n${a} ≡ ${b} (mod ${m})\n\n[STATUS]: ${isCongruent ? "KONGRUEN (SIMETRIS)" : "TIDAK KONGRUEN"}\n\n[ANALISIS GEOMETRI]\na - b = ${a} - ${b} = ${diff}\n` + 
         (isCongruent 
-          ? `Karena ${m} membagi habis ${diff}, dua era dinyatakan KONGRUEN.` 
-          : `Karena ${m} TIDAK membagi habis ${diff}, dua era TIDAK KONGRUEN.`);
+          ? `Karena ${m} membagi habis ${diff}, struktur fasad dinyatakan KONGRUEN (Simetris sempurna).` 
+          : `Karena ${m} TIDAK membagi habis ${diff}, struktur TIDAK KONGRUEN.`);
     }
 
     function convertNumberSystem() {
@@ -482,7 +483,7 @@
 
       if (!inputVal) {
         out.className = "output-box error";
-        out.innerText = "Masukkan naskah angka yang ingin dikonversi!";
+        out.innerText = "Masukkan nilai dimensi yang ingin dikonversi!";
         return;
       }
 
@@ -495,7 +496,7 @@
 
       if (!regexes[base].test(inputVal)) {
         out.className = "output-box error";
-        out.innerText = `Simbol "${inputVal}" tidak dikenal pada Basis ${base}!`;
+        out.innerText = `Input "${inputVal}" tidak valid untuk Basis ${base}!`;
         return;
       }
 
@@ -507,7 +508,7 @@
       const heksa = decimalVal.toString(16).toUpperCase();
 
       out.className = "output-box success";
-      out.innerText = `[HASIL TRANSLASI]\n• Biner (2)   : ${biner}\n• Oktal (8)   : ${oktal}\n• Desimal (10): ${desimal}\n• Heksa (16)  : ${heksa}`;
+      out.innerText = `[HASIL KONVERSI DIMENSI]\n• Biner (2)   : ${biner}\n• Oktal (8)   : ${oktal}\n• Desimal (10): ${desimal}\n• Heksa (16)  : ${heksa}`;
     }
 
     function factorial(n) {
@@ -548,7 +549,7 @@
       const cResult = factorial(n) / (factorial(r) * factorial(n - r));
 
       out.className = "output-box success";
-      out.innerText = `[PERMUTASI URUTAN P(${n},${r})]\nRumus : ${n}! / (${n}-${r})!\nHasil : ${pResult}\n\n[KOMBINASI ALIANSI C(${n},${r})]\nRumus : ${n}! / (${r}! × (${n}-${r})!)\nHasil : ${cResult}`;
+      out.innerText = `[PERMUTASI POSISI PILAR P(${n},${r})]\nRumus : ${n}! / (${n}-${r})!\nHasil : ${pResult}\n\n[KOMBINASI PATUNG & ORNAMEN C(${n},${r})]\nRumus : ${n}! / (${r}! × (${n}-${r})!)\nHasil : ${cResult}`;
     }
   </script>
 </body>
