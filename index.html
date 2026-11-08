@@ -1,60 +1,424 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matematika Informatika - Rasya Dwi Anugrah</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-dark: #070913;
-      --card-bg: rgba(15, 23, 42, 0.75);
-      --accent-cyan: #38bdf8;
-      --accent-purple: #a855f7;
-      --accent-pink: #ec4899;
-      --accent-green: #34d399;
-      --text-main: #f8fafc;
-      --text-muted: #94a3b8;
-      --border-color: rgba(255, 255, 255, 0.1);
-      --error-color: #fb7185;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio & Bukti Belajar - Rasya Dwi Anugrah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lora', serif;
+            background-color: #f1f3f5;
+            color: #212529;
+        }
+        h1, h2, h3, h4, .font-classic {
+            font-family: 'Cinzel', serif;
+        }
+        code, pre, .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .classic-border {
+            border: 3px double #495057;
+        }
+        .classic-box {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid #ced4da;
+        }
+        .tab-btn.active {
+            background-color: #343a40;
+            color: #ffffff;
+            border-color: #343a40;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between p-4 md:p-8">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <!-- HEADER / NAVIGATION -->
+    <header class="max-w-5xl mx-auto w-full mb-8 text-center border-b-2 border-slate-700 pb-6">
+        <h1 class="text-3xl md:text-5xl font-bold tracking-wider text-slate-900 mb-2">RASYA DWI ANUGRAH</h1>
+        <p class="text-slate-600 text-sm md:text-base italic tracking-widest uppercase">
+            NIM: 262505007 &bull; Semester 1 &bull; Prodi Sistem Informasi
+        </p>
+        
+        <nav class="mt-6 flex flex-wrap justify-center gap-4">
+            <button onclick="switchSection('biodata')" id="nav-biodata" class="tab-btn active px-6 py-2 border border-slate-700 text-sm font-semibold tracking-wider transition-all duration-200">
+                BIODATA DIRI
+            </button>
+            <button onclick="switchSection('bukti-belajar')" id="nav-bukti-belajar" class="tab-btn px-6 py-2 border border-slate-700 text-sm font-semibold tracking-wider transition-all duration-200">
+                BUKTI BELAJAR MATEMATIKA
+            </button>
+        </nav>
+    </header>
 
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      /* Background Tema Cyber Lighting (Glow Effect) */
-      background: #070913;
-      background-image: 
-        radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.25) 0px, transparent 50%),
-        radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.25) 0px, transparent 50%),
-        radial-gradient(at 50% 100%, rgba(236, 72, 153, 0.2) 0px, transparent 50%),
-        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1920&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      color: var(--text-main);
-      line-height: 1.6;
-      min-height: 100vh;
-    }
+    <main class="max-w-5xl mx-auto w-full flex-grow">
+        
+        <!-- SECTION 1: BIODATA DIRI -->
+        <section id="section-biodata" class="classic-box p-6 md:p-10 rounded-none classic-border">
+            <div class="border-b border-slate-300 pb-4 mb-6">
+                <h2 class="text-2xl font-bold text-slate-900 uppercase tracking-wide">Profil Mahasiswa</h2>
+                <p class="text-slate-500 text-sm">Informasi akademis dan kontak personal</p>
+            </div>
 
-    /* Navbar */
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background-color: rgba(7, 9, 19, 0.85);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--border-color);
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-4">
+                    <div>
+                        <span class="text-xs uppercase font-bold text-slate-500 tracking-wider block">Nama Lengkap</span>
+                        <p class="text-lg font-semibold text-slate-800">Rasya Dwi Anugrah</p>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase font-bold text-slate-500 tracking-wider block">Nomor Induk Mahasiswa (NIM)</span>
+                        <p class="text-lg font-semibold text-slate-800 font-mono">262505007</p>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase font-bold text-slate-500 tracking-wider block">Program Studi</span>
+                        <p class="text-lg font-semibold text-slate-800">Sistem Informasi (Semester 1)</p>
+                    </div>
+                </div>
 
-    .nav-brand {
-      font-weight: 80
+                <div class="space-y-4">
+                    <div>
+                        <span class="text-xs uppercase font-bold text-slate-500 tracking-wider block">Mata Kuliah</span>
+                        <p class="text-lg font-semibold text-slate-800">Matematika Informatika</p>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase font-bold text-slate-500 tracking-wider block">Email Kontak</span>
+                        <p class="text-lg font-semibold text-slate-800 font-mono">dwianugrahrasya@gmail.com</p>
+                    </div>
+                    <div>
+                        <span class="text-xs uppercase font-bold text-slate-500 tracking-wider block">Status Project</span>
+                        <span class="inline-block bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1 rounded border border-slate-400 mt-1">
+                            UTS Project Challenge (Level 1 - 6 Completed)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: BUKTI BELAJAR -->
+        <section id="section-bukti-belajar" class="hidden space-y-8">
+            <div class="classic-box p-6 border-l-4 border-slate-800 bg-slate-100">
+                <h2 class="text-2xl font-bold text-slate-900 uppercase">Bukti Belajar</h2>
+                <p class="text-slate-700 italic mt-1">
+                    "Perjalanan belajar Matematika Informatika bersama Pa Iin TA 20261"
+                </p>
+            </div>
+
+            <!-- LEVEL 1: MODULO CALCULATOR -->
+            <div class="classic-box p-6 classic-border">
+                <div class="border-b border-slate-300 pb-3 mb-4">
+                    <span class="text-xs font-bold bg-slate-800 text-white px-2 py-1 uppercase tracking-wider">Level 1</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-2">Modulo Calculator</h3>
+                    <p class="text-xs text-slate-500">Menghitung sisa hasil pembagian $a \bmod m$ (Mendukung bilangan negatif)</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Bilangan Bulat (a):</label>
+                            <input type="number" id="l1-a" value="17" class="w-full p-2 border border-slate-400 font-mono focus:outline-none focus:border-slate-800">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Modulus Positif (m):</label>
+                            <input type="number" id="l1-m" value="5" min="1" class="w-full p-2 border border-slate-400 font-mono focus:outline-none focus:border-slate-800">
+                        </div>
+                        <button onclick="calcModulo()" class="w-full bg-slate-800 text-white py-2 text-sm font-semibold tracking-wider hover:bg-slate-700 transition">
+                            HITUNG MODULO
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 border border-slate-300 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-slate-500 block mb-2">Hasil Perhitungan:</span>
+                            <div id="l1-result" class="text-2xl font-bold font-mono text-slate-900">17 mod 5 = 2</div>
+                        </div>
+                        <div id="l1-process" class="mt-4 text-xs font-mono text-slate-600 border-t border-slate-200 pt-2">
+                            Proses: 17 = (3 × 5) + 2
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEVEL 2: CONGRUENCE CHECKER -->
+            <div class="classic-box p-6 classic-border">
+                <div class="border-b border-slate-300 pb-3 mb-4">
+                    <span class="text-xs font-bold bg-slate-800 text-white px-2 py-1 uppercase tracking-wider">Level 2</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-2">Congruence Checker</h3>
+                    <p class="text-xs text-slate-500">Mengecek apakah $a \equiv b \pmod m$ (Konsep: $m$ membagi habis $(a - b)$)</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-3">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Bilangan (a):</label>
+                                <input type="number" id="l2-a" value="17" class="w-full p-2 border border-slate-400 font-mono focus:outline-none focus:border-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Bilangan (b):</label>
+                                <input type="number" id="l2-b" value="2" class="w-full p-2 border border-slate-400 font-mono focus:outline-none focus:border-slate-800">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Modulus Positif (m):</label>
+                            <input type="number" id="l2-m" value="5" min="1" class="w-full p-2 border border-slate-400 font-mono focus:outline-none focus:border-slate-800">
+                        </div>
+                        <button onclick="checkCongruence()" class="w-full bg-slate-800 text-white py-2 text-sm font-semibold tracking-wider hover:bg-slate-700 transition">
+                            PERIKSA KONGRUENSI
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 border border-slate-300 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold text-slate-500 block mb-2">Status Kongruensi:</span>
+                            <div id="l2-status" class="text-xl font-bold text-slate-900">KONGRUEN</div>
+                            <div id="l2-notation" class="text-sm font-mono text-slate-700 mt-1">17 ≡ 2 (mod 5)</div>
+                        </div>
+                        <div id="l2-process" class="mt-4 text-xs font-mono text-slate-600 border-t border-slate-200 pt-2">
+                            Penjelasan: (17 - 2) = 15, habis dibagi 5 (15 / 5 = 3).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEVEL 5: NUMBER SYSTEM CALCULATOR -->
+            <div class="classic-box p-6 classic-border">
+                <div class="border-b border-slate-300 pb-3 mb-4">
+                    <span class="text-xs font-bold bg-slate-800 text-white px-2 py-1 uppercase tracking-wider">Level 5</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-2">Number System Calculator</h3>
+                    <p class="text-xs text-slate-500">Konversi realtime antara Biner, Desimal, Oktal, dan Heksadesimal</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-3">
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Input Nilai Bilangan:</label>
+                            <input type="text" id="l5-input" value="1010" oninput="convertBase()" class="w-full p-2 border border-slate-400 font-mono uppercase focus:outline-none focus:border-slate-800">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-600 mb-1">Basis Asal:</label>
+                            <select id="l5-base" onchange="convertBase()" class="w-full p-2 border border-slate-400 font-mono focus:outline-none focus:border-slate-800">
+                                <option value="2">Biner (Basis 2)</option>
+                                <option value="10" selected>Desimal (Basis 10)</option>
+                                <option value="8">Oktal (Basis 8)</option>
+                                <option value="16">Heksadesimal (Basis 16)</option>
+                            </select>
+                        </div>
+                        <div id="l5-error" class="text-xs text-red-600 font-mono hidden">Input tidak valid untuk basis yang dipilih!</div>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 border border-slate-300 space-y-2 font-mono text-sm">
+                        <div class="flex justify-between border-b border-slate-200 pb-1">
+                            <span class="text-slate-500">Biner (2):</span>
+                            <span id="res-bin" class="font-bold text-slate-800">1010</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-200 pb-1">
+                            <span class="text-slate-500">Desimal (10):</span>
+                            <span id="res-dec" class="font-bold text-slate-800">10</span>
+                        </div>
+                        <div class="flex justify-between border-b border-slate-200 pb-1">
+                            <span class="text-slate-500">Oktal (8):</span>
+                            <span id="res-oct" class="font-bold text-slate-800">12</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-slate-500">Heksadesimal (16):</span>
+                            <span id="res-hex" class="font-bold text-slate-800">A</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LEVEL 6: COMBINATORICS CALCULATOR -->
+            <div class="classic-box p-6 classic-border">
+                <div class="border-b border-slate-300 pb-3 mb-4">
+                    <span class="text-xs font-bold bg-slate-800 text-white px-2 py-1 uppercase tracking-wider">Level 6</span>
+                    <h3 class="text-xl font-bold text-slate-900 mt-2">Combinatorics Calculator</h3>
+                    <p class="text-xs text-slate-500">Perhitungan Permutasi $P(n,r)$ dan Kombinasi $C(n,r)$ dengan syarat $0 \le r \le n$</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="space-y-3">
+                        <div class="grid grid-cols-2 gap-2">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Total Objek (n):</label>
+                                <input type="number" id="l6-n" value="5" min="0" max="20" class="w-full p-2 border border-slate-400 font-mono focus:outline-none focus:border-slate-800">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-600 mb-1">Diambil (r):</label>
+                                <input type="number" id="l6-r" value="2" min="0" max="20" class="w-full p-2 border border-slate-400 font-mono focus:outline-none focus:border-slate-800">
+                            </div>
+                        </div>
+                        <button onclick="calcCombinatorics()" class="w-full bg-slate-800 text-white py-2 text-sm font-semibold tracking-wider hover:bg-slate-700 transition">
+                            HITUNG PERMUTASI & KOMBINASI
+                        </button>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 border border-slate-300 flex flex-col justify-between">
+                        <div class="space-y-3">
+                            <div>
+                                <span class="text-xs uppercase font-bold text-slate-500 block">Permutasi P(n,r):</span>
+                                <div id="l6-perm" class="text-xl font-bold font-mono text-slate-900">P(5,2) = 20</div>
+                                <div id="l6-perm-formula" class="text-xs font-mono text-slate-500">Rumus: 5! / (5-2)!</div>
+                            </div>
+                            <div class="border-t border-slate-200 pt-2">
+                                <span class="text-xs uppercase font-bold text-slate-500 block">Kombinasi C(n,r):</span>
+                                <div id="l6-comb" class="text-xl font-bold font-mono text-slate-900">C(5,2) = 10</div>
+                                <div id="l6-comb-formula" class="text-xs font-mono text-slate-500">Rumus: 5! / (2!(5-2)!)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="max-w-5xl mx-auto w-full mt-12 border-t border-slate-300 pt-4 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Rasya Dwi Anugrah (NIM: 262505007) &bull;dwianugrahrasya@gmail.com</p>
+    </footer>
+
+    <!-- JAVASCRIPT ENGINE -->
+    <script>
+        function switchSection(section) {
+            document.getElementById('section-biodata').classList.add('hidden');
+            document.getElementById('section-bukti-belajar').classList.add('hidden');
+            document.getElementById('nav-biodata').classList.remove('active');
+            document.getElementById('nav-bukti-belajar').classList.remove('active');
+
+            if (section === 'biodata') {
+                document.getElementById('section-biodata').classList.remove('hidden');
+                document.getElementById('nav-biodata').classList.add('active');
+            } else {
+                document.getElementById('section-bukti-belajar').classList.remove('hidden');
+                document.getElementById('nav-bukti-belajar').classList.add('active');
+            }
+        }
+
+        // LEVEL 1: Modulo Calculator
+        function calcModulo() {
+            const a = parseInt(document.getElementById('l1-a').value);
+            const m = parseInt(document.getElementById('l1-m').value);
+
+            if (isNaN(a) || isNaN(m) || m <= 0) {
+                alert("Modulus (m) harus berupa bilangan bulat positif!");
+                return;
+            }
+
+            let result = a % m;
+            if (result < 0) result += m;
+
+            const k = Math.floor((a - result) / m);
+
+            document.getElementById('l1-result').innerText = `${a} mod ${m} = ${result}`;
+            document.getElementById('l1-process').innerText = `Proses: ${a} = (${k} × ${m}) + ${result}`;
+        }
+
+        // LEVEL 2: Congruence Checker
+        function checkCongruence() {
+            const a = parseInt(document.getElementById('l2-a').value);
+            const b = parseInt(document.getElementById('l2-b').value);
+            const m = parseInt(document.getElementById('l2-m').value);
+
+            if (isNaN(a) || isNaN(b) || isNaN(m) || m <= 0) {
+                alert("Masukkan angka yang valid dan Modulus (m) > 0!");
+                return;
+            }
+
+            const diff = a - b;
+            const isCongruent = (diff % m === 0);
+
+            const statusElem = document.getElementById('l2-status');
+            const notationElem = document.getElementById('l2-notation');
+            const processElem = document.getElementById('l2-process');
+
+            if (isCongruent) {
+                statusElem.innerText = "KONGRUEN";
+                statusElem.className = "text-xl font-bold text-green-700";
+                notationElem.innerText = `${a} ≡ ${b} (mod ${m})`;
+                processElem.innerText = `Penjelasan: (${a} - ${b}) = ${diff}, habis dibagi ${m} (${diff} / ${m} = ${diff / m}).`;
+            } else {
+                statusElem.innerText = "TIDAK KONGRUEN";
+                statusElem.className = "text-xl font-bold text-red-700";
+                notationElem.innerText = `${a} ≢ ${b} (mod ${m})`;
+                processElem.innerText = `Penjelasan: (${a} - ${b}) = ${diff}, tidak habis dibagi ${m} (sisa ${((diff % m) + m) % m}).`;
+            }
+        }
+
+        // LEVEL 5: Number System Calculator
+        function convertBase() {
+            const inputVal = document.getElementById('l5-input').value.trim();
+            const base = parseInt(document.getElementById('l5-base').value);
+            const errorElem = document.getElementById('l5-error');
+
+            if (inputVal === "") {
+                document.getElementById('res-bin').innerText = "-";
+                document.getElementById('res-dec').innerText = "-";
+                document.getElementById('res-oct').innerText = "-";
+                document.getElementById('res-hex').innerText = "-";
+                errorElem.classList.add('hidden');
+                return;
+            }
+
+            const decVal = parseInt(inputVal, base);
+
+            if (isNaN(decVal)) {
+                errorElem.classList.remove('hidden');
+                return;
+            } else {
+                errorElem.classList.add('hidden');
+            }
+
+            document.getElementById('res-bin').innerText = decVal.toString(2);
+            document.getElementById('res-dec').innerText = decVal.toString(10);
+            document.getElementById('res-oct').innerText = decVal.toString(8);
+            document.getElementById('res-hex').innerText = decVal.toString(16).toUpperCase();
+        }
+
+        // LEVEL 6: Combinatorics Calculator
+        function factorial(num) {
+            if (num < 0) return -1;
+            if (num === 0 || num === 1) return 1n;
+            let result = 1n;
+            for (let i = 2n; i <= BigInt(num); i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        function calcCombinatorics() {
+            const n = parseInt(document.getElementById('l6-n').value);
+            const r = parseInt(document.getElementById('l6-r').value);
+
+            if (isNaN(n) || isNaN(r) || n < 0 || r < 0) {
+                alert("Nilai n dan r harus berupa bilangan bulat non-negatif!");
+                return;
+            }
+
+            if (r > n) {
+                alert("Syarat tidak terpenuhi: Nilai r harus lebih kecil atau sama dengan n (0 ≤ r ≤ n)!");
+                return;
+            }
+
+            const factN = factorial(n);
+            const factR = factorial(r);
+            const factNR = factorial(n - r);
+
+            const perm = factN / factNR;
+            const comb = factN / (factR * factNR);
+
+            document.getElementById('l6-perm').innerText = `P(${n}, ${r}) = ${perm.toString()}`;
+            document.getElementById('l6-perm-formula').innerText = `Proses: ${n}! / (${n}-${r})!`;
+
+            document.getElementById('l6-comb').innerText = `C(${n}, ${r}) = ${comb.toString()}`;
+            document.getElementById('l6-comb-formula').innerText = `Proses: ${n}! / (${r}!(${n}-${r})!)`;
+        }
+
+        // Init Level 5 & Level 6
+        convertBase();
+        calcCombinatorics();
+    </script>
+</body>
+</html>
