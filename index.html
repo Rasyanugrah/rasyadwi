@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio Sepak Bola & Bukti Belajar - Rasya Dwi Anugrah</title>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <title>Portofolio Sejarah & Bukti Belajar - Rasya Dwi Anugrah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #06110e;
-      --card-bg: #11221c;
-      --accent-green: #00ff87;
-      --accent-gold: #ffd700;
-      --text-main: #f0fdf4;
-      --text-muted: #86efac;
-      --border-color: #1f3b30;
-      --error-color: #ff4d4d;
+      --bg-dark: #120d0a;
+      --card-bg: #1c1410;
+      --accent-gold: #d4af37;
+      --accent-bronze: #cd7f32;
+      --text-main: #f5efe6;
+      --text-muted: #c8b9a6;
+      --border-color: #3a2b22;
+      --error-color: #e65c5c;
     }
 
     * {
@@ -25,8 +25,8 @@
 
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
-      /* Background dengan tema rumput stadion malam hari */
-      background: linear-gradient(135deg, #04120b 0%, #062316 50%, #0f3d24 100%);
+      /* Background tema arsip & naskah kuno */
+      background: linear-gradient(135deg, #0e0907 0%, #17100c 50%, #241812 100%);
       background-attachment: fixed;
       color: var(--text-main);
       line-height: 1.6;
@@ -38,9 +38,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background-color: rgba(4, 18, 11, 0.9);
+      background-color: rgba(14, 9, 7, 0.92);
       backdrop-filter: blur(10px);
-      border-bottom: 2px solid var(--accent-green);
+      border-bottom: 2px solid var(--accent-gold);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -48,11 +48,12 @@
     }
 
     .nav-brand {
+      font-family: 'Cinzel', serif;
       font-weight: 800;
       font-size: 1.3rem;
-      color: var(--accent-green);
+      color: var(--accent-gold);
+      letter-spacing: 2px;
       text-transform: uppercase;
-      letter-spacing: 1px;
     }
 
     .nav-links {
@@ -69,7 +70,7 @@
     }
 
     .nav-links a:hover {
-      color: var(--accent-green);
+      color: var(--accent-gold);
     }
 
     /* Main Layout */
@@ -86,33 +87,469 @@
     }
 
     .section-title {
+      font-family: 'Cinzel', serif;
       font-size: 2.2rem;
       font-weight: 800;
       margin-bottom: 0.5rem;
-      color: var(--accent-green);
+      color: var(--accent-gold);
+      letter-spacing: 1px;
     }
 
     .section-subtitle {
       color: var(--text-muted);
       margin-bottom: 2rem;
       font-size: 1.05rem;
+      font-style: italic;
     }
 
     /* Hero & Biodata Section */
     .biodata-card {
       background: var(--card-bg);
       border: 1px solid var(--border-color);
-      border-top: 4px solid var(--accent-green);
-      border-radius: 1rem;
+      border-top: 4px solid var(--accent-gold);
+      border-radius: 0.75rem;
       padding: 2.5rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 255, 135, 0.08);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.05);
     }
 
     .biodata-info h1 {
+      font-family: 'Cinzel', serif;
       font-size: 2.2rem;
       line-height: 1.2;
       margin-bottom: 0.5rem;
+      color: var(--accent-gold);
     }
+
+    .badge {
+      display: inline-block;
+      background: rgba(212, 175, 55, 0.1);
+      color: var(--accent-gold);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      padding: 0.3rem 0.8rem;
+      border-radius: 2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .detail-list {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    .detail-list li {
+      margin-bottom: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .detail-list strong {
+      color: var(--text-main);
+    }
+
+    /* Bukti Belajar Grid */
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .calc-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 0.75rem;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .calc-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-gold);
+    }
+
+    .calc-header {
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.75rem;
+    }
+
+    .calc-header h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      color: var(--accent-gold);
+    }
+
+    .calc-header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Form Controls */
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    input, select {
+      background: #110b08;
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.65rem 0.9rem;
+      border-radius: 0.4rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    input:focus, select:focus {
+      border-color: var(--accent-gold);
+    }
+
+    .btn {
+      background: linear-gradient(135deg, var(--accent-gold), var(--accent-bronze));
+      color: #120d0a;
+      border: none;
+      padding: 0.75rem 1.25rem;
+      border-radius: 0.4rem;
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      margin-top: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Output Box */
+    .output-box {
+      background: #110b08;
+      border: 1px dashed var(--border-color);
+      border-radius: 0.4rem;
+      padding: 1rem;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.85rem;
+      min-height: 80px;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .output-box.success {
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    .output-box.error {
+      border-color: var(--error-color);
+      color: var(--error-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigasi -->
+  <nav>
+    <div class="nav-brand">🏛️ Arsip Sejarah - Rasya</div>
+    <ul class="nav-links">
+      <li><a href="#biodata">Profil Peneliti</a></li>
+      <li><a href="#bukti-belajar">Bukti Belajar Kuno</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    
+    <!-- SECTION BIODATA PRIBADI -->
+    <section id="biodata">
+      <div class="biodata-card">
+        <div class="biodata-info">
+          <span class="badge">Arsiparis & SI Student • SI-R-1</span>
+          <h1>Rasya Dwi Anugrah</h1>
+          <p style="color: var(--text-muted); margin-top: 0.5rem;">
+            Mahasiswa Semester 1 Sistem Informasi yang mendokumentasikan logis matematika melalui peradaban sejarah dan naskah komputasi kuno.
+          </p>
+          <ul class="detail-list">
+            <li><strong>NIM:</strong> 262505007</li>
+            <li><strong>Fakultas / Prodi:</strong> Komputer / Sistem Informasi (SI-R-1)</li>
+            <li><strong>Mata Kuliah:</strong> Matematika Informatika</li>
+            <li><strong>Dosen Pengampu:</strong> Iin, M.Kom</li>
+            <li><strong>Fokus Era:</strong> Komputasi Kuno & Kriptografi Sejarah</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION BUKTI BELAJAR -->
+    <section id="bukti-belajar">
+      <h2 class="section-title">Bukti Belajar</h2>
+      <!-- Subtitle Wajib sesuai instruksi Level 4 -->
+      <p class="section-subtitle">Perjalanan belajar Matematika Informatika bersama Pa Iin TA 20261</p>
+
+      <div class="calc-grid">
+        
+        <!-- LEVEL 1: Modulo Calculator -->
+        <div class="calc-card">
+          <div class="calc-header">
+            <h3>Level 1: Kalkulator Modulo</h3>
+            <p>Perhitungan sisa pembagian (a mod m) untuk siklus penanggalan kuno</p>
+          </div>
+          <div class="form-group">
+            <label>Bilangan Utama (a)</label>
+            <input type="number" id="l1-a" placeholder="Contoh: 17">
+          </div>
+          <div class="form-group">
+            <label>Siklus Modulus (m > 0)</label>
+            <input type="number" id="l1-m" placeholder="Contoh: 5">
+          </div>
+          <button class="btn" onclick="calcModulo()">Hitung Modulo</button>
+          <div id="l1-output" class="output-box">Hasil inskripsi akan muncul di sini...</div>
+        </div>
+
+        <!-- LEVEL 2: Congruence Checker -->
+        <div class="calc-card">
+          <div class="calc-header">
+            <h3>Level 2: Pengecek Kongruensi</h3>
+            <p>Verifikasi keselarasan dua era sejarah a ≡ b (mod m)</p>
+          </div>
+          <div class="form-group">
+            <label>Tahun / Era a</label>
+            <input type="number" id="l2-a" placeholder="Contoh: 17">
+          </div>
+          <div class="form-group">
+            <label>Tahun / Era b</label>
+            <input type="number" id="l2-b" placeholder="Contoh: 2">
+          </div>
+          <div class="form-group">
+            <label>Modulus m (> 0)</label>
+            <input type="number" id="l2-m" placeholder="Contoh: 5">
+          </div>
+          <button class="btn" onclick="checkCongruence()">Periksa Kongruensi</button>
+          <div id="l2-output" class="output-box">Hasil inskripsi akan muncul di sini...</div>
+        </div>
+
+        <!-- LEVEL 5: Number System Calculator -->
+        <div class="calc-card">
+          <div class="calc-header">
+            <h3>Level 5: Konverter Sistem Bilangan</h3>
+            <p>Translasi angka antar peradaban (Biner, Desimal, Oktal, Heksa)</p>
+          </div>
+          <div class="form-group">
+            <label>Sistem Asal</label>
+            <select id="l5-base">
+              <option value="2">Biner (Basis 2)</option>
+              <option value="10" selected>Desimal (Basis 10)</option>
+              <option value="8">Oktal (Basis 8)</option>
+              <option value="16">Heksadesimal (Basis 16)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Kode Naskah / Simbol</label>
+            <input type="text" id="l5-input" placeholder="Masukkan nilai...">
+          </div>
+          <button class="btn" onclick="convertNumberSystem()">Terjemahkan</button>
+          <div id="l5-output" class="output-box">Hasil inskripsi akan muncul di sini...</div>
+        </div>
+
+        <!-- LEVEL 6: Combinatorics Calculator -->
+        <div class="calc-card">
+          <div class="calc-header">
+            <h3>Level 6: Kalkulator Kombinatorika</h3>
+            <p>Analisis susunan taktik perang & aliansi (Permutasi & Kombinasi)</p>
+          </div>
+          <div class="form-group">
+            <label>Total Artefak / Pasukan (n)</label>
+            <input type="number" id="l6-n" placeholder="Contoh: 5">
+          </div>
+          <div class="form-group">
+            <label>Jumlah Terpilih (r)</label>
+            <input type="number" id="l6-r" placeholder="Contoh: 2">
+          </div>
+          <button class="btn" onclick="calcCombinatorics()">Hitung Formasi Sejarah</button>
+          <div id="l6-output" class="output-box">Hasil inskripsi akan muncul di sini...</div>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Rasya Dwi Anugrah (NIM: 262505007) - Sistem Informasi. All rights reserved.</p>
+  </footer>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    function calcModulo() {
+      const aInput = document.getElementById('l1-a').value;
+      const mInput = document.getElementById('l1-m').value;
+      const out = document.getElementById('l1-output');
+
+      if (aInput === "" || mInput === "") {
+        out.className = "output-box error";
+        out.innerText = "Harap masukan nilai a dan m!";
+        return;
+      }
+
+      const a = parseInt(aInput);
+      const m = parseInt(mInput);
+
+      if (isNaN(a) || isNaN(m)) {
+        out.className = "output-box error";
+        out.innerText = "Input harus berupa bilangan bulat!";
+        return;
+      }
+
+      if (m <= 0) {
+        out.className = "output-box error";
+        out.innerText = "Modulus (m) harus berupa bilangan bulat positif (> 0)!";
+        return;
+      }
+
+      const result = ((a % m) + m) % m;
+      const k = Math.floor(a / m);
+
+      out.className = "output-box success";
+      out.innerText = `[ARSIP KONSISTENSI]\n${a} mod ${m} = ${result}\n\n[DOKUMENTASI]\n${a} = (${m} × ${k}) + ${result}\nSisa siklus penanggalan = ${result}`;
+    }
+
+    function checkCongruence() {
+      const aInput = document.getElementById('l2-a').value;
+      const bInput = document.getElementById('l2-b').value;
+      const mInput = document.getElementById('l2-m').value;
+      const out = document.getElementById('l2-output');
+
+      if (aInput === "" || bInput === "" || mInput === "") {
+        out.className = "output-box error";
+        out.innerText = "Harap masukan nilai a, b, dan m!";
+        return;
+      }
+
+      const a = parseInt(aInput);
+      const b = parseInt(bInput);
+      const m = parseInt(mInput);
+
+      if (m <= 0) {
+        out.className = "output-box error";
+        out.innerText = "Modulus (m) harus berupa bilangan bulat positif (> 0)!";
+        return;
+      }
+
+      const diff = a - b;
+      const isCongruent = (diff % m === 0);
+
+      out.className = isCongruent ? "output-box success" : "output-box error";
+      out.innerText = `[VERIFIKASI ERA]\n${a} ≡ ${b} (mod ${m})\n\n[STATUS]: ${isCongruent ? "KONGRUEN (HARMONIS)" : "TIDAK KONGRUEN"}\n\n[METODE ARSIP]\na - b = ${a} - ${b} = ${diff}\n` + 
+        (isCongruent 
+          ? `Karena ${m} membagi habis ${diff}, dua era dinyatakan KONGRUEN.` 
+          : `Karena ${m} TIDAK membagi habis ${diff}, dua era TIDAK KONGRUEN.`);
+    }
+
+    function convertNumberSystem() {
+      const inputVal = document.getElementById('l5-input').value.trim();
+      const base = parseInt(document.getElementById('l5-base').value);
+      const out = document.getElementById('l5-output');
+
+      if (!inputVal) {
+        out.className = "output-box error";
+        out.innerText = "Masukkan naskah angka yang ingin dikonversi!";
+        return;
+      }
+
+      const regexes = {
+        2: /^[01]+$/,
+        8: /^[0-7]+$/,
+        10: /^[0-9]+$/,
+        16: /^[0-9a-fA-F]+$/
+      };
+
+      if (!regexes[base].test(inputVal)) {
+        out.className = "output-box error";
+        out.innerText = `Simbol "${inputVal}" tidak dikenal pada Basis ${base}!`;
+        return;
+      }
+
+      const decimalVal = parseInt(inputVal, base);
+
+      const biner = decimalVal.toString(2);
+      const oktal = decimalVal.toString(8);
+      const desimal = decimalVal.toString(10);
+      const heksa = decimalVal.toString(16).toUpperCase();
+
+      out.className = "output-box success";
+      out.innerText = `[HASIL TRANSLASI]\n• Biner (2)   : ${biner}\n• Oktal (8)   : ${oktal}\n• Desimal (10): ${desimal}\n• Heksa (16)  : ${heksa}`;
+    }
+
+    function factorial(n) {
+      if (n < 0) return 0;
+      if (n === 0 || n === 1) return 1;
+      let res = 1;
+      for (let i = 2; i <= n; i++) res *= i;
+      return res;
+    }
+
+    function calcCombinatorics() {
+      const nInput = document.getElementById('l6-n').value;
+      const rInput = document.getElementById('l6-r').value;
+      const out = document.getElementById('l6-output');
+
+      if (nInput === "" || rInput === "") {
+        out.className = "output-box error";
+        out.innerText = "Harap masukan nilai n dan r!";
+        return;
+      }
+
+      const n = parseInt(nInput);
+      const r = parseInt(rInput);
+
+      if (n < 0 || r < 0) {
+        out.className = "output-box error";
+        out.innerText = "Nilai n dan r harus ≥ 0!";
+        return;
+      }
+
+      if (r > n) {
+        out.className = "output-box error";
+        out.innerText = "Syarat validasi tidak terpenuhi! (Harus 0 ≤ r ≤ n)";
+        return;
+      }
+
+      const pResult = factorial(n) / factorial(n - r);
+      const cResult = factorial(n) / (factorial(r) * factorial(n - r));
+
+      out.className = "output-box success";
+      out.innerText = `[PERMUTASI URUTAN P(${n},${r})]\nRumus : ${n}! / (${n}-${r})!\nHasil : ${pResult}\n\n[KOMBINASI ALIANSI C(${n},${r})]\nRumus : ${n}! / (${r}! × (${n}-${r})!)\nHasil : ${cResult}`;
+    }
+  </script>
+</body>
+</html>
